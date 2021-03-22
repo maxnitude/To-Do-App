@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/To-Do-App/static/css/main.854204e8.chunk.css",
-    "main.js": "/To-Do-App/static/js/main.0d124f8a.chunk.js",
-    "main.js.map": "/To-Do-App/static/js/main.0d124f8a.chunk.js.map",
-    "runtime-main.js": "/To-Do-App/static/js/runtime-main.84b10023.js",
-    "runtime-main.js.map": "/To-Do-App/static/js/runtime-main.84b10023.js.map",
-    "static/js/2.96ab63b0.chunk.js": "/To-Do-App/static/js/2.96ab63b0.chunk.js",
-    "static/js/2.96ab63b0.chunk.js.map": "/To-Do-App/static/js/2.96ab63b0.chunk.js.map",
-    "index.html": "/To-Do-App/index.html",
-    "static/css/main.854204e8.chunk.css.map": "/To-Do-App/static/css/main.854204e8.chunk.css.map",
-    "static/js/2.96ab63b0.chunk.js.LICENSE.txt": "/To-Do-App/static/js/2.96ab63b0.chunk.js.LICENSE.txt"
+    "main.css": "/to-do-app/static/css/main.854204e8.chunk.css",
+    "main.js": "/to-do-app/static/js/main.ecdf79ea.chunk.js",
+    "main.js.map": "/to-do-app/static/js/main.ecdf79ea.chunk.js.map",
+    "runtime-main.js": "/to-do-app/static/js/runtime-main.fa91d057.js",
+    "runtime-main.js.map": "/to-do-app/static/js/runtime-main.fa91d057.js.map",
+    "static/js/2.96ab63b0.chunk.js": "/to-do-app/static/js/2.96ab63b0.chunk.js",
+    "static/js/2.96ab63b0.chunk.js.map": "/to-do-app/static/js/2.96ab63b0.chunk.js.map",
+    "index.html": "/to-do-app/index.html",
+    "static/css/main.854204e8.chunk.css.map": "/to-do-app/static/css/main.854204e8.chunk.css.map",
+    "static/js/2.96ab63b0.chunk.js.LICENSE.txt": "/to-do-app/static/js/2.96ab63b0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.84b10023.js",
+    "static/js/runtime-main.fa91d057.js",
     "static/js/2.96ab63b0.chunk.js",
     "static/css/main.854204e8.chunk.css",
-    "static/js/main.0d124f8a.chunk.js"
+    "static/js/main.ecdf79ea.chunk.js"
   ]
 }
