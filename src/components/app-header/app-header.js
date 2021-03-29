@@ -1,11 +1,11 @@
 import React from 'react';
 import './app-header.css';
 
-const AppHeader = ({liked, allPosts}) => {
+const AppHeader = ({importantPosts, allPosts}) => {
     return (
-        <div className="app-header d-flex">
-            <h1>ToDoList</h1>
-            <h2>Количество записей: {allPosts}, из них понравилось: {liked}</h2>
+        <div className="app-header">
+            <h1>To-Do List</h1>
+            <h2>Количество записей: {allPosts}, избранное: {importantPosts}</h2>
         </div>
     )
 }

@@ -11,7 +11,7 @@ export default class App extends React.Component {
         super(props);
         this.state = {
             data : [
-                {label: 'Написать что-нибудь в форме снизу', important: false, like: false, id: 1000},
+                {label: 'Написать что-нибудь в форме снизу', important: false, id: 1000},
             ],
             term: '',
             filter: 'all'
@@ -19,10 +19,8 @@ export default class App extends React.Component {
         this.deleteItem = this.deleteItem.bind(this);
         this.addItem = this.addItem.bind(this);
         this.onToggleImportant = this.onToggleImportant.bind(this);
-        this.onToggleLike = this.onToggleLike.bind(this);
         this.onUpdateSearch = this.onUpdateSearch.bind(this);
         this.onFilterSelect = this.onFilterSelect.bind(this);
-
         this.newId = 1001;
         }
  
@@ -47,7 +45,6 @@ export default class App extends React.Component {
 
         this.setState(({data}) => {
             if (newItem.label === null || newItem.label.length > 40 || !newItem.label.trim()) {   
-                
                 return [...data]
             } else {
                 const newData = [...data, newItem];
@@ -71,20 +68,6 @@ export default class App extends React.Component {
         })
     }
 
-    onToggleLike(id) {
-        this.setState(({data}) => {
-            const index = data.findIndex(elem => elem.id === id);
-            const old = data[index];
-            const newItem = {...old, like: !old.like};
-            const newArr = [...data.slice (0, index), newItem, ...data.slice(index + 1)];
-
-            return {
-                data: newArr
-            }
-        })
-    }
-
-
     searchPost(items, term) {
         if (term.length === 0 ) {
             return items
@@ -96,8 +79,8 @@ export default class App extends React.Component {
     }
 
     filterPost(items, filter) {
-        if (filter === 'like') {
-            return items.filter(item => item.like)
+        if (filter === 'important') {
+            return items.filter(item => item.important)
         } else {
             return items
         }
@@ -113,17 +96,16 @@ export default class App extends React.Component {
 
     render () {
         const {data, term, filter} = this.state;
-        const liked = data.filter(item => item.like).length;
         const allPosts = data.length;
-
+        const importantPosts = data.filter(item => item.important).length;
         const visiblePosts = this.filterPost(this.searchPost(data, term), filter);
         
         return (
             <div className="app">
                 <AppHeader
-                    liked={liked}
-                    allPosts={allPosts}/>
-                <div className="search-panel d-flex">
+                    allPosts={allPosts}
+                    importantPosts ={importantPosts}/>
+                <div className="search-panel">
                     <SearchPanel 
                         onUpdateSearch={this.onUpdateSearch}/>
                     <PostStatusFilter
@@ -133,8 +115,7 @@ export default class App extends React.Component {
                 <PostList 
                     posts={visiblePosts} 
                     onDelete={this.deleteItem}
-                    onToggleImportant={this.onToggleImportant}
-                    onToggleLike={this.onToggleLike} />
+                    onToggleImportant={this.onToggleImportant}/>
                 <PostAddForm onAdd={this.addItem}/>
             </div>
         )

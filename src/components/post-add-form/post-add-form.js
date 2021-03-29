@@ -28,10 +28,10 @@ export default class PostAddForm extends React.Component  {
     render() {
         return (
             <form 
-                className="bottom-panel d-flex"
+                className="bottom-panel"
                 onSubmit={this.onSubmit}>
                 <input
-                    maxlength="40"
+                    maxLength="40"
                     type="text"
                     placeholder="Напишите что-нибудь: не более 40 символов"
                     className="form-control new-post-label"
@@ -40,12 +40,11 @@ export default class PostAddForm extends React.Component  {
                 />
                 <button 
                     type="submit"
-                    className="btn btn-outline-secondary">
+                    className="btn btn-outline-primary">
                     Добавить
                 </button>
             </form>
         )
-    }
-    
+    }   
 }
 

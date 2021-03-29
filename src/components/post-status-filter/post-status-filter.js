@@ -6,7 +6,7 @@ export default class PostStatusFilter extends React.Component {
         super(props);
         this.buttons =[
             {name: 'all', label: 'Все'},
-            {name: 'like', label: 'Понравилось'},
+            {name: 'important', label: 'Избранное'},
         ]
     }
     
@@ -14,12 +14,12 @@ export default class PostStatusFilter extends React.Component {
         
         const buttons = this.buttons.map(({name, label}) => {
             const active = this.props.filter === name;
-            const clazz = active ? 'btn-info' : 'btn-outline-secondary'
+            const buttonClass = active ? 'btn-primary' : 'btn-outline-secondary'
             
             return (
                 <button 
                     key={name} 
-                    className={`btn ${clazz}`} 
+                    className={`btn ${buttonClass}`} 
                     type="button"
                     onClick={() => this.props.onFilterSelect(name)}
                     >{label}
@@ -29,7 +29,6 @@ export default class PostStatusFilter extends React.Component {
         
         return (
             <div className="btn-group">
-                
                 {buttons}
             </div>
         )

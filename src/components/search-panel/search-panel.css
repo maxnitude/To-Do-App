@@ -1,9 +1,20 @@
 .search-panel {
+  display: flex;
   margin: 1rem 0;
 }
 
 .search-panel .search-input {
   width: auto;
   flex-grow: 1;
-  margin-right: 3px;
+  margin: auto 3px;
+}
+
+@media screen and (max-width: 576px) {
+  .search-panel  {
+    flex-direction: column;
+  }
+
+  .search-panel .search-input {
+    margin: 10px 3px;
+  }
 }

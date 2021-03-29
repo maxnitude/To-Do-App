@@ -2,6 +2,7 @@
   font-size: 1.25rem;
   display: flex;
   justify-content: space-between; 
+  align-items: center;
 }
 
 .app-list-item button {
@@ -17,40 +18,44 @@
     outline: none;
 }
 .app-list-item .btn-star {
-    color: #FFD700;
+    color: #bbb9b0;
 }
 .app-list-item .btn-trash {
     color: red;
 }
-.app-list-item .fa-heart {
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    font-size: 16px;
-    color: red;
-    transition: 0.3s all;
-    transform: translateX(30px);
-    opacity: 0;
-}
 
 .app-list-item-label {
   display: block;
-  line-height: 35px;
+  margin: auto 0;
   cursor: pointer;
   user-select: none;
   transition: 0.5s all;
-}
-
-.app-list-item.like .fa-heart {
-    opacity: 1;
-    transform: translateX(0px);
-}
-
-.app-list-item.important .app-list-item-label {
-  color: #FFD700;
+  max-width: calc(100% - 90px);
+  word-wrap: break-word;  
 }
 
 .app-list-item.important .btn-star {
-    color: #aeaeae;
+    color: rgb(231, 212, 36);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .app-list-item {
+    font-size: 1rem;
+  }
+
+  .app-list-item-label {
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button-container {
+    flex-direction: column;
+  }
 }
